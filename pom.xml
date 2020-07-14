@@ -11,6 +11,7 @@
 
   <properties>
     <app.name>library</app.name>
+    <api.version>library</api.version>
     <package.file>${project.build.directory}/${app.name}-service.jar</package.file>
     <packaging.type>runnable</packaging.type>
     <microprofile.version>1.2</microprofile.version>
