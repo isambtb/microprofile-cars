@@ -1,8 +1,10 @@
 package com.ibosoft.cars.util;
 
+import com.ibosoft.cars.boundary.CarEndpoint;
 import com.ibosoft.cars.model.Car;
 import java.io.InputStream;
 import java.util.List;
+import java.util.logging.Logger;
 import javax.json.Json;
 import javax.json.JsonArray;
 import javax.json.JsonArrayBuilder;
@@ -13,6 +15,8 @@ import javax.json.JsonReader;
 import javax.json.JsonString;
 
 public class CarMapper {
+
+  private static final Logger LOGGER = Logger.getLogger(CarEndpoint.class.getName());
 
   public static JsonObject map(Car car) {
     JsonObjectBuilder builder = Json.createObjectBuilder();

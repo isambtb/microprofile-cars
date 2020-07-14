@@ -1,6 +1,7 @@
 package com.ibosoft.cars.repo;
 
 
+import com.ibosoft.cars.boundary.CarEndpoint;
 import com.ibosoft.cars.model.Car;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -9,10 +10,14 @@ import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.logging.Logger;
 import javax.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
 public class CarManager {
+
+  private static final Logger LOGGER = Logger.getLogger(CarEndpoint.class.getName());
+
 
   private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMM");
   private AtomicInteger bookIdGenerator = new AtomicInteger(0);
